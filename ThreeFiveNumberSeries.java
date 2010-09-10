@@ -10,8 +10,6 @@ public class ThreeFiveNumberSeries {
 	private final static String MULT_THREE = "MultThree";
 	private final static String MULT_FIVE = "MultFive";
 	
-	private static int m_remThree;
-	private static int m_remFive;
 	
 	/**
 	 * main
@@ -51,16 +49,16 @@ public class ThreeFiveNumberSeries {
 		List<String> seriesList = new ArrayList<String>();
 
 		for (int i=m_start; i<=m_end; i++) {
-			m_remThree = i % 3;
-			m_remFive = i % 5;
+			int remThree = i % 3;
+			int remFive = i % 5;
 
-			if (m_remThree == 0 && m_remFive == 0) {	
+			if (remThree == 0 && remFive == 0) {	
 				seriesList.add(MULT_THREE+MULT_FIVE);
 			}
-			else if (m_remThree == 0) {
+			else if (remThree == 0) {
 				seriesList.add(MULT_THREE);
 			}
-			else if (m_remFive == 0) {
+			else if (remFive == 0) {
 				seriesList.add(MULT_FIVE);
 			}
 			else {
